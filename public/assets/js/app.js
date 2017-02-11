@@ -24185,10 +24185,11 @@
 	    var _ret = function () {
 	        switch (action.type) {
 	            case 'REQUEST_RESULTS':
+	                var currentResults = state.query === action.query ? state.results : [];
 	                return {
 	                    v: Object.assign({}, state, {
 	                        isLoading: true,
-	                        results: state.results,
+	                        results: currentResults,
 	                        query: action.query,
 	                        totalResults: state.totalResults,
 	                        nextPageToken: state.nextPageToken
@@ -24196,16 +24197,16 @@
 	                };
 	                break;
 	            case 'RECEIVE_RESULTS':
-	                var currentResults = state.results;
+	                var newResults = state.results;
 
 	                action.payload.map(function (item) {
-	                    currentResults.push(item);
+	                    newResults.push(item);
 	                });
 
 	                return {
 	                    v: Object.assign({}, state, {
 	                        isLoading: false,
-	                        results: currentResults,
+	                        results: newResults,
 	                        query: action.query,
 	                        totalResults: action.totalResults,
 	                        nextPageToken: action.nextPageToken
