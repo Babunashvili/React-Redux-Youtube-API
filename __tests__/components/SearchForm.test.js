@@ -1,4 +1,4 @@
-import SearchForm from '../../components/SearchForm'
+import SearchForm from '../../src/components/SearchForm'
 import React from 'react';
 import { mount } from 'enzyme';
 

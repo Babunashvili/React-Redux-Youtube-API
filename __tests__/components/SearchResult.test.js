@@ -1,4 +1,4 @@
-import SearchResult from '../../components/SearchResult'
+import SearchResult from '../../src/components/SearchResult'
 import React from 'react';
 import { mount } from 'enzyme';
 
