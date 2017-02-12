@@ -14,7 +14,12 @@ class SearchResults extends Component {
                 {video}
                 <br/>
                 <br/>
-                <center><button className="button is-default" onClick={ () => { this.props.loadMore() }}>Load More</button></center>
+                <center>
+                    <button className="button is-default" 
+                         onClick={ () => { this.props.loadMore() }}>
+                         Load More
+                    </button>
+                </center>
             </div>
             : <div> <center>No Results</center> </div>} </div>)
     }

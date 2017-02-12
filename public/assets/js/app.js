@@ -30820,7 +30820,8 @@
 	                        null,
 	                        _react2.default.createElement(
 	                            'button',
-	                            { className: 'button is-default', onClick: function onClick() {
+	                            { className: 'button is-default',
+	                                onClick: function onClick() {
 	                                    _this2.props.loadMore();
 	                                } },
 	                            'Load More'
